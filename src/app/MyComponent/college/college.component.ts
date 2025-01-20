@@ -7,19 +7,14 @@ import { Student } from '../../Student';
 
 @Component({
   selector: 'app-college',
-  imports: [CommonModule, StudentsComponent],
+  imports: [CommonModule],
   templateUrl: './college.component.html',
   styleUrl: './college.component.css'
 })
 export class CollegeComponent implements OnInit {
 
-  studentList: Student[] = [
-    { id: 1, name: 'Alice', date: '12/12/2024' },
-    { id: 2, name: 'Bob', date: '12/12/2024' },
-    { id: 3, name: 'Charlie', date: '12/12/2026' }
-  ];
   courses: Course[] = [];
-  // @Input() student: Student[] = [];
+  @Input() title:string ='';
   constructor(){
     this.courses=[
       {
