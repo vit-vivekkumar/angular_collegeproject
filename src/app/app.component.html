@@ -10,7 +10,7 @@
 </nav>
 
 <div class="container-fluid">
-  <app-students [studentList]="studentList"></app-students>
+  <app-students [studentList]="studentList" (dataFetched)="handleDataFetched($event)"></app-students>
 </div>
 </div>
 <br>
